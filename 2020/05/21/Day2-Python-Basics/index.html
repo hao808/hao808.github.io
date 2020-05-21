@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Python | I can do something</title>
+  <title>Day2-Python-Basics | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/tags/Python/index.html">
+  <meta name="description" content="Python之路（2）还是Python基础篇，还是基于上篇文章提到的教程。链接在下  The link of tutorials: Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day2-Python-Basics">
+<meta property="og:url" content="http://yoursite.com/2020/05/21/Day2-Python-Basics/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="Python之路（2）还是Python基础篇，还是基于上篇文章提到的教程。链接在下  The link of tutorials: Python">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-21T19:26:26.000Z">
+<meta property="article:modified_time" content="2020-05-21T20:30:47.598Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
@@ -148,36 +154,80 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Day2-Python-Basics" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Day2-Python-Basics
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/21/Day2-Python-Basics/" class="archive-article-date">
+
+        
+        <a href="/2020/05/21/Day2-Python-Basics/" class="archive-article-date">
   	<time datetime="2020-05-21T19:26:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/21/Day2-Python-Basics/">Day2-Python-Basics</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python之路（2）"><a href="#Python之路（2）" class="headerlink" title="Python之路（2）"></a>Python之路（2）</h1><p>还是Python基础篇，还是基于上篇文章提到的教程。链接在下</p>
+<blockquote>
+<p>The link of tutorials: <a href="https://www.cnblogs.com/alex3714/articles/5717620.html" target="_blank" rel="noopener">Python</a></p>
+</blockquote>
+<a id="more"></a>
+<p>在这几天自己写的练习来看，列表和字典是我最容易想到的。这并不代表者其他的方法不好用，毕竟对一个要求每个人都有自己写代码的爱好和习惯。</p>
+<h2 id="列表代码练习"><a href="#列表代码练习" class="headerlink" title="列表代码练习"></a>列表代码练习</h2><h3 id="购物车小程序"><a href="#购物车小程序" class="headerlink" title="购物车小程序"></a>购物车小程序</h3><p><strong>要求</strong>：</p>
+<ul>
+<li>启动程序后，用户输入工资，打印商品列表</li>
+<li>允许用户根据商品编号购买物品</li>
+<li>选择物品后，检测余额是否足够购买所选商品</li>
+<li>退出时，打印已购买商品和余额</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#购物车程序</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">product_id=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="comment">#print(type(product_id[0]))</span></span><br><span class="line">product_list=[<span class="string">"Nike"</span>,<span class="string">"Adidas"</span>,<span class="string">"Jordan"</span>]</span><br><span class="line">product_price=[<span class="number">200</span>,<span class="number">100</span>,<span class="number">300</span>]</span><br><span class="line">purchased_item=[]</span><br><span class="line">total=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">salary=int(input(<span class="string">"Please enter your salary:$"</span>))</span><br><span class="line">c=input(<span class="string">"Want to shop?(y/n)"</span>)</span><br><span class="line"><span class="keyword">while</span>(c==<span class="string">"y"</span>):</span><br><span class="line">    print(<span class="string">"Shopping list"</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(product_list)):</span><br><span class="line">        print(product_id[i],product_list[i],product_price[i],sep=<span class="string">'   '</span>)</span><br><span class="line">    p=int(input(<span class="string">"Please enter the item ID to purchase."</span>))</span><br><span class="line">    <span class="comment">#print(type(p))</span></span><br><span class="line">    <span class="keyword">if</span>(p <span class="keyword">in</span> product_id):</span><br><span class="line">        <span class="keyword">if</span> salary&gt;=product_price[p]:</span><br><span class="line">            print(<span class="string">"success!"</span>)</span><br><span class="line">            print(<span class="string">"your new balance is "</span>,salary-product_price[p])</span><br><span class="line">            purchased_item.append(product_list[p])</span><br><span class="line">            total=total+product_price[p]</span><br><span class="line">            salary=salary-product_price[p]</span><br><span class="line">            c=input(<span class="string">"still want to shop?(y/n)"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"the item is not affordable!"</span>)</span><br><span class="line">            c=input(<span class="string">"still want to shop?(y/n)"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"item not available!"</span>)</span><br><span class="line">        c=input(<span class="string">"still want to shop?(y/n)"</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">"Your receipt"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(purchased_item)):</span><br><span class="line">        print(i,purchased_item[i],sep=<span class="string">'   '</span>)</span><br><span class="line">print(<span class="string">"your total is:$"</span>,total)</span><br><span class="line">sys.exit()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>上面的程序应用到了创建列表，列表的操作，逻辑的应用，参数形式的转换，参数间的运算。这样的小程序练习起来十分爽快，程序即没那么复杂，也起到了巩固知识，应用新知识的作用。</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="文件的打开，读取和修改"><a href="#文件的打开，读取和修改" class="headerlink" title="文件的打开，读取和修改"></a>文件的打开，读取和修改</h3><p>无论哪一种编程语言，对于文件的操作都是重要的，也是对于代码可自动化的一种基本体现。</p>
+<h3 id="用Python实现shell-sed的替代功能"><a href="#用Python实现shell-sed的替代功能" class="headerlink" title="用Python实现shell sed的替代功能"></a>用Python实现shell sed的替代功能</h3><blockquote>
+<p>SED command in UNIX is stands for stream editor and it can perform lot’s of function on file like,searching,find,replace and so on.</p>
+</blockquote>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><p>原文本内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>I enjoy using Windows</span><br></pre></td></tr></table></figure>
+<p>实现修改</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f=open(<span class="string">'test.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">a=f.readlines()</span><br><span class="line">f=open(<span class="string">'test.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    f.write(i.replace(<span class="string">'Windows'</span>,<span class="string">'MacOS'</span>))</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>修改后文本内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>I enjoy using MacOSt</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,103 +243,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/21/Day2-Python-Basics/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Day1-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-15T23:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/16/Why-MacOS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Why MacOS?</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Day1-Python-Basics/">Day1-Python Basics</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Python/" class="archive-article-date">
-  	<time datetime="2020-05-15T16:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Python/">Python Questions</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -312,9 +365,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
