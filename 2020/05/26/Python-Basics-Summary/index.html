@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Code | I can do something</title>
+  <title>Python-Basics-Summary | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/tags/Code/index.html">
+  <meta name="description" content="Python基础篇（总结）这一篇文章是对前一段基础学习的遗漏补充和总结。之前的文章写完了Python之路Day1，2，3，这篇文章也会包含Python之路Day4，5。放上链接  The link of tutorials:   Day4 Day5  编程语言（Programming languages） Machine languages –&gt; Assembly languages –&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-Basics-Summary">
+<meta property="og:url" content="http://yoursite.com/2020/05/26/Python-Basics-Summary/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="Python基础篇（总结）这一篇文章是对前一段基础学习的遗漏补充和总结。之前的文章写完了Python之路Day1，2，3，这篇文章也会包含Python之路Day4，5。放上链接  The link of tutorials:   Day4 Day5  编程语言（Programming languages） Machine languages –&gt; Assembly languages –&amp;g">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-27T00:13:24.000Z">
+<meta property="article:modified_time" content="2020-05-27T01:54:42.385Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
@@ -148,36 +154,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Python-Basics-Summary" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Python-Basics-Summary
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/26/Python-Basics-Summary/" class="archive-article-date">
+
+        
+        <a href="/2020/05/26/Python-Basics-Summary/" class="archive-article-date">
   	<time datetime="2020-05-27T00:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/26/Python-Basics-Summary/">Python-Basics-Summary</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python基础篇（总结）"><a href="#Python基础篇（总结）" class="headerlink" title="Python基础篇（总结）"></a>Python基础篇（总结）</h1><p>这一篇文章是对前一段基础学习的<strong>遗漏补充</strong>和<strong>总结</strong>。之前的文章写完了Python之路Day1，2，3，这篇文章也会包含Python之路Day4，5。放上链接</p>
+<blockquote>
+<p>The link of tutorials:</p>
+</blockquote>
+<ul>
+<li><a href="https://www.cnblogs.com/alex3714/articles/5765046.html" target="_blank" rel="noopener">Day4</a></li>
+<li><a href="https://www.cnblogs.com/alex3714/articles/5161349.html" target="_blank" rel="noopener">Day5</a></li>
+</ul>
+<h2 id="编程语言（Programming-languages）"><a href="#编程语言（Programming-languages）" class="headerlink" title="编程语言（Programming languages）"></a>编程语言（Programming languages）</h2><blockquote>
+<p>Machine languages –&gt; Assembly languages –&gt; high-level languages</p>
+</blockquote>
+<p>为什么要在提到这个问题呢？我觉得我们应该记住编程语言是如何一步步发展过来的，而我们现在所使用的大多数编程语言都是high-level languages（高级语言）毕竟user-friendly还是很重要，开发效率也更高。而之前提到的高级语言中的编译性和解释型语言在这篇就不多提了。但需要强调的是Python是一门<strong>先编译后解释</strong>的语言</p>
+<h2 id="字符编码（Character-encoding"><a href="#字符编码（Character-encoding" class="headerlink" title="字符编码（Character encoding)"></a>字符编码（Character encoding)</h2><p>Python2.X和Python3.X的默认编码是不同的，这也就是为什么我们看到好多代码文件需要在文件开始处注释如何编码。例如：-<em>-coding:utf-8 -</em>-<br>1.Python2 <strong>ASCII</strong></p>
+<blockquote>
+<p>ASCII（American Standard Code for Information Interchange，美国标准信息交换代码)</p>
+</blockquote>
+<p>2.Python3 <strong>Unicode</strong></p>
+<blockquote>
+<p>ASCII码无法将世界上的各种文字和符号全部表示，所以，就需要新出一种可以代表所有字符和符号的编码，即：Unicode</p>
+</blockquote>
+<h2 id="编码与解码（Encoding-and-decoding"><a href="#编码与解码（Encoding-and-decoding" class="headerlink" title="编码与解码（Encoding and decoding)"></a>编码与解码（Encoding and decoding)</h2><ul>
+<li><strong>将字符串已utf-8形式编码</strong></li>
+<li><strong>将编码后的字符串再已utf-8形式解码</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">'昊'</span></span><br><span class="line">utf8=s.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">m=utf8.decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">print(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(utf8)</span><br><span class="line">print(type(utf8))</span><br><span class="line">print(m)</span><br></pre></td></tr></table></figure>
+输出<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">昊</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xe6</span>\<span class="title">x98</span>\<span class="title">x8a</span>'</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">bytes</span>'&gt;</span></span><br><span class="line"><span class="class">昊</span></span><br></pre></td></tr></table></figure>
+上面提到的文件编码方式都是Python解释器中的默认编码方式，所以不同语言已unicode加载到内存中，程序就可以正常显示。我们也可以发现字符在已utf-8编码后，字符格式为<strong>bytes</strong>而不是之前的<strong>str</strong><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="内置函数（Built-in-functions）"><a href="#内置函数（Built-in-functions）" class="headerlink" title="内置函数（Built-in functions）"></a>内置函数（Built-in functions）</h3>列举一些常见的内置函数</li>
+</ul>
+<ol>
+<li>strip()</li>
+<li>open()</li>
+<li>len()</li>
+<li>range()</li>
+<li>isdigit()</li>
+<li>enumerate()（索引）</li>
+<li>map()（映射）</li>
+<li>lambda()（匿名函数）</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,187 +254,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/26/Python-Basics-Summary/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/22/Day3-Python-Functions/" class="archive-article-date">
-  	<time datetime="2020-05-22T19:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/22/Day3-Python-Functions/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Day3-Python-Functions</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/22/Day3-Python-Functions/">Day3-Python-Functions</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/21/Day2-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-21T19:26:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/21/Day2-Python-Basics/">Day2-Python-Basics</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Day1-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-15T23:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Day1-Python-Basics/">Day1-Python-Basics</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Python/" class="archive-article-date">
-  	<time datetime="2020-05-15T16:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Python/">Python Questions</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -396,9 +376,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
