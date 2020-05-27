@@ -172,41 +172,11 @@
       
         <h1 id="Python基础篇（总结）"><a href="#Python基础篇（总结）" class="headerlink" title="Python基础篇（总结）"></a>Python基础篇（总结）</h1><p>这一篇文章是对前一段基础学习的<strong>遗漏补充</strong>和<strong>总结</strong>。之前的文章写完了Python之路Day1，2，3，这篇文章也会包含Python之路Day4，5。放上链接</p>
 <blockquote>
-<p>The link of tutorials:</p>
+<p>The link of tutorials:<a href="https://www.cnblogs.com/alex3714/articles/5765046.html" target="_blank" rel="noopener">Day4</a>&nbsp;<a href="https://www.cnblogs.com/alex3714/articles/5161349.html" target="_blank" rel="noopener">Day5</a></p>
 </blockquote>
-<ul>
-<li><a href="https://www.cnblogs.com/alex3714/articles/5765046.html" target="_blank" rel="noopener">Day4</a></li>
-<li><a href="https://www.cnblogs.com/alex3714/articles/5161349.html" target="_blank" rel="noopener">Day5</a></li>
-</ul>
-<h2 id="编程语言（Programming-languages）"><a href="#编程语言（Programming-languages）" class="headerlink" title="编程语言（Programming languages）"></a>编程语言（Programming languages）</h2><blockquote>
-<p>Machine languages –&gt; Assembly languages –&gt; high-level languages</p>
-</blockquote>
-<p>为什么要在提到这个问题呢？我觉得我们应该记住编程语言是如何一步步发展过来的，而我们现在所使用的大多数编程语言都是high-level languages（高级语言）毕竟user-friendly还是很重要，开发效率也更高。而之前提到的高级语言中的编译性和解释型语言在这篇就不多提了。但需要强调的是Python是一门<strong>先编译后解释</strong>的语言</p>
-<h2 id="字符编码（Character-encoding"><a href="#字符编码（Character-encoding" class="headerlink" title="字符编码（Character encoding)"></a>字符编码（Character encoding)</h2><p>Python2.X和Python3.X的默认编码是不同的，这也就是为什么我们看到好多代码文件需要在文件开始处注释如何编码。例如：-<em>-coding:utf-8 -</em>-<br>1.Python2 <strong>ASCII</strong></p>
-<blockquote>
-<p>ASCII（American Standard Code for Information Interchange，美国标准信息交换代码)</p>
-</blockquote>
-<p>2.Python3 <strong>Unicode</strong></p>
-<blockquote>
-<p>ASCII码无法将世界上的各种文字和符号全部表示，所以，就需要新出一种可以代表所有字符和符号的编码，即：Unicode</p>
-</blockquote>
-<h2 id="编码与解码（Encoding-and-decoding"><a href="#编码与解码（Encoding-and-decoding" class="headerlink" title="编码与解码（Encoding and decoding)"></a>编码与解码（Encoding and decoding)</h2><ul>
-<li><strong>将字符串已utf-8形式编码</strong></li>
-<li><strong>将编码后的字符串再已utf-8形式解码</strong><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s=<span class="string">'昊'</span></span><br><span class="line">utf8=s.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">m=utf8.decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">print(s)</span><br><span class="line">print(type(s))</span><br><span class="line">print(utf8)</span><br><span class="line">print(type(utf8))</span><br><span class="line">print(m)</span><br></pre></td></tr></table></figure>
-输出<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">昊</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xe6</span>\<span class="title">x98</span>\<span class="title">x8a</span>'</span></span><br><span class="line"><span class="class">&lt;<span class="title">class</span> '<span class="title">bytes</span>'&gt;</span></span><br><span class="line"><span class="class">昊</span></span><br></pre></td></tr></table></figure>
-上面提到的文件编码方式都是Python解释器中的默认编码方式，所以不同语言已unicode加载到内存中，程序就可以正常显示。我们也可以发现字符在已utf-8编码后，字符格式为<strong>bytes</strong>而不是之前的<strong>str</strong><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="内置函数（Built-in-functions）"><a href="#内置函数（Built-in-functions）" class="headerlink" title="内置函数（Built-in functions）"></a>内置函数（Built-in functions）</h3>列举一些常见的内置函数</li>
-</ul>
-<ol>
-<li>strip()</li>
-<li>open()</li>
-<li>len()</li>
-<li>range()</li>
-<li>isdigit()</li>
-<li>enumerate()（索引）</li>
-<li>map()（映射）</li>
-<li>lambda()（匿名函数）</li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2020/05/26/Python-Basics-Summary/#more">more >></a>
+        
       
 
       
