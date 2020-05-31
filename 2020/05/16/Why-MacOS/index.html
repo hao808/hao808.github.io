@@ -15,14 +15,16 @@
 <meta property="og:site_name" content="I can do something">
 <meta property="og:description" content="2012年，我爸送给了我人生中第一台MacOS设备–MacBook Air。当时的我对于计算机没多大兴趣，也根本不懂什么是内存，显卡，硬盘，blablabla。刚开始使用MacOS，所有的一切都是那么陌生，但并不会让人有不舒服的感觉。在随后的四年，我开始了我的探索Mac的道路。2016年，我购入了第二台MacOS设备–MacBook Pro并使用至今。不断的了解，不断的深入，使我对MacOS有了一">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/art/osxlayers.gif">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8f/Kernel_Layout.svg">
+<meta property="og:image" content="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/art/osxarchitecture.gif">
 <meta property="article:published_time" content="2020-05-17T01:31:19.000Z">
-<meta property="article:modified_time" content="2020-05-31T22:08:20.072Z">
+<meta property="article:modified_time" content="2020-05-31T23:11:15.539Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Apple">
 <meta property="article:tag" content="MacOS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/8/8f/Kernel_Layout.svg">
+<meta name="twitter:image" content="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/art/osxlayers.gif">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
   
@@ -184,22 +186,41 @@
 </blockquote>
 <h3 id="Architectue（架构）"><a href="#Architectue（架构）" class="headerlink" title="Architectue（架构）"></a>Architectue（架构）</h3><p>MacOS操作系统的组成主要有以下几层（Layers）：</p>
 <ul>
-<li>Kernel environment（最底层）</li>
-<li>Core services</li>
-<li>Applications services</li>
-<li>Graphics</li>
-<li>Carbon/Cocoa/Java(JDK)<blockquote>
+<li><p>Kernel environment（最底层）</p>
+</li>
+<li><p>Core services</p>
+</li>
+<li><p>Applications services</p>
+</li>
+<li><p>Graphics</p>
+</li>
+<li><p>Carbon/Cocoa/Java(JDK)</p>
+<p><img src="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/art/osxlayers.gif" alt="alt"></p>
+<blockquote>
 <p><a href="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Architecture/Architecture.html" target="_blank" rel="noopener">参考链接：MacOS Architectue</a></p>
 </blockquote>
 </li>
 </ul>
-<p>一个操作系统中通常有两种与计算机交互的方式</p>
-<ol>
-<li>GUI</li>
-<li>Shell Command-line UI</li>
-</ol>
-<p>我们所使用的Windows中的桌面，MacOS中的Finder都是GUI（图形交互）的体现。</p>
-<h3 id="Kernel（内核）"><a href="#Kernel（内核）" class="headerlink" title="Kernel（内核）"></a>Kernel（内核）</h3><p> 为什么说内核是操作系统的<strong>核心</strong>所在?上图<br><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Kernel_Layout.svg" alt="alt"><br> <code>Darwin</code>在MacOS中就扮演了Kernel environment的角色。而Darwin继承了<code>UNIX</code>的特性，在不同成程度上与UNIX有很多的相似之处。这也就是为什么MacOS是一款UNIX-like（类UNIX）的操作系统。一个操作系统的架构绝不是一言两语就是阐述到位的。作为一个普通的使用者来讲，能做到全面的了解也绝不是容易的事。简单说，UNIX是一个庞大的家族，而MacOS是家族中最出名的那一个。</p>
+<h3 id="Kernel（内核）"><a href="#Kernel（内核）" class="headerlink" title="Kernel（内核）"></a>Kernel（内核）</h3><p> 为什么说内核是操作系统的<strong>核心</strong>所在?上图<br><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Kernel_Layout.svg" alt="alt"><br> <code>Darwin</code>在MacOS中就扮演了Kernel environment的角色。而Darwin继承了<code>UNIX</code>的特性，在不同成程度上与UNIX有很多的相似之处。这也就是为什么MacOS是一款UNIX-like（类UNIX）的操作系统。一个操作系统的架构绝不是一言两语就是阐述到位的。作为一个普通的使用者来讲，能做到全面的了解也绝不是容易的事。简单说，UNIX是一个庞大的家族，而MacOS是家族中最出名的那一个。我们可以理解为在MacOS研发时，使用开源的darwin为内核，在上层添加了core services以及其他内容。这些不同的板块结合起来形成了MacOS，而MacOS的内核又是由什么组成的呢？<br><img src="https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/art/osxarchitecture.gif" alt="alt"></p>
+<ul>
+<li>Mach<blockquote>
+<p>Mach manages processor resources such as CPU usage and memory, handles scheduling, provides memory protection, and provides a messaging-centered infrastructure to the rest of the operating-system layers</p>
+</blockquote>
+</li>
+<li>BSD<blockquote>
+<p>the BSD layer provides “OS personality” APIs and services. The BSD layer is based on the BSD kernel, primarily FreeBSD. The BSD component provides</p>
+<ul>
+<li>file system.</li>
+<li>networking (except for the hardware device level)</li>
+<li>UNIX security model</li>
+<li>syscall support</li>
+<li>the BSD process model, including process IDs and signals,FreeBSD kernel APIs</li>
+<li>many of the POSIX APIs</li>
+<li>kernel support for pthreads (POSIX threads</li>
+</ul>
+</blockquote>
+</li>
+</ul>
 <h3 id="Characteristics（特性）"><a href="#Characteristics（特性）" class="headerlink" title="Characteristics（特性）"></a>Characteristics（特性）</h3><p> 之前听到有传闻说，因为<code>Windows</code>的关闭窗口在右上角，所以<code>MacOS</code>把红色的XX放到了左上角。<br> 当然传闻的出处我还没有考证,但是也从侧面说出了两款操作系统的巨大区别。举个简单的例子，试试在Mac执行一个.exe的程序…前面也提到MacOS继承了UNIX系统的特征，而这些特征又是什么呢？</p>
 <h4 id="UNIX目录"><a href="#UNIX目录" class="headerlink" title="UNIX目录"></a>UNIX目录</h4><p> 通常情况下以下目录是被系统隐藏起来的，可以通过termianl<code>open /</code>打开查看</p>
 <ul>
@@ -218,6 +239,12 @@
 <li>System</li>
 <li>Users</li>
 </ul>
+<h4 id="Aqua"><a href="#Aqua" class="headerlink" title="Aqua"></a>Aqua</h4><p>用户图形界面<br>一个操作系统中通常有两种与计算机交互的方式</p>
+<ol>
+<li>GUI</li>
+<li>Shell Command-line UI</li>
+</ol>
+<p>我们所使用的Windows中的桌面，MacOS中的Finder都是GUI（图形交互）的体现。我们平时使用MacOS中所看到的，所使用的都是在应用图形交互，而Aqua就是MacOS的图形交互界面。</p>
 <h2 id="Why-do-we-need-a-Mac？"><a href="#Why-do-we-need-a-Mac？" class="headerlink" title="Why do we need a Mac？"></a>Why do we need a Mac？</h2><blockquote>
 <p>我发现我慢慢的已经忘记了Windows</p>
 </blockquote>
