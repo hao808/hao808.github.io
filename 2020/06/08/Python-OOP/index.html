@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Code | I can do something</title>
+  <title>Python-OOP | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/tags/Code/index.html">
+  <meta name="description" content="这一段日子没怎么更新，也没怎么看代码，一直在弄回国和机票的事，只要有时间还是会继续整理 前言面向对象我早就想写了，好好总结一下，对自己也有帮助，也会对OOP更加熟悉。跟之前一样，还是基于对于Python之路的学习。放上链接  The link of tutorials:Day6  多说一句，我又找到了另外一个非常全面的学习博客，人家真是厉害啊。  链接：Python全栈开发之路  Ok!正文开始">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-OOP">
+<meta property="og:url" content="http://yoursite.com/2020/06/08/Python-OOP/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="这一段日子没怎么更新，也没怎么看代码，一直在弄回国和机票的事，只要有时间还是会继续整理 前言面向对象我早就想写了，好好总结一下，对自己也有帮助，也会对OOP更加熟悉。跟之前一样，还是基于对于Python之路的学习。放上链接  The link of tutorials:Day6  多说一句，我又找到了另外一个非常全面的学习博客，人家真是厉害啊。  链接：Python全栈开发之路  Ok!正文开始">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-08T18:32:04.000Z">
+<meta property="article:modified_time" content="2020-06-12T20:06:34.896Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
@@ -148,36 +154,90 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Python-OOP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Python-OOP
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/08/Python-OOP/" class="archive-article-date">
+
+        
+        <a href="/2020/06/08/Python-OOP/" class="archive-article-date">
   	<time datetime="2020-06-08T18:32:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/08/Python-OOP/">Python-OOP</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>这一段日子没怎么更新，也没怎么看代码，一直在弄回国和机票的事，只要有时间还是会继续整理</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>面向对象我早就想写了，好好总结一下，对自己也有帮助，也会对OOP更加熟悉。跟之前一样，还是基于对于Python之路的学习。放上链接</p>
+<blockquote>
+<p>The link of tutorials:<a href="https://www.cnblogs.com/alex3714/articles/5188179.html" target="_blank" rel="noopener">Day6</a></p>
+</blockquote>
+<p>多说一句，我又找到了另外一个非常全面的学习博客，人家真是厉害啊。</p>
+<blockquote>
+<p>链接：<a href="https://www.cnblogs.com/wj-1314/p/8476197.html" target="_blank" rel="noopener">Python全栈开发之路</a></p>
+</blockquote>
+<p>Ok!正文开始</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h1 id="关于面向对象（Object-oriented-programming"><a href="#关于面向对象（Object-oriented-programming" class="headerlink" title="关于面向对象（Object-oriented programming)"></a>关于面向对象（Object-oriented programming)</h1><p>为什么看上去面向对象编程更复杂？但实际上越复杂的程序反而使用面向对象会使得整体看上去更富有逻辑性更有调理。当我们思考事情时，最简单的就是从上到下，一步一步来，而这种逻辑也是一种我们最常用的编程方式—面向过程。</p>
+<h2 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h2><p>举个例子：输入-&gt;输出-&gt;打印。够简单直接吧，这就是面向过程。而我觉得面向过程最大的弊端就是牵一发而动全身。一旦你的代码需求不同了，我们可能就会发现整个代码都需要修改。很显然，面向过程可以编写复杂的程序，但是维护起来就很头疼了，有点一锤子买卖的意思。</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>怎么理解<strong>类</strong>和<strong>对象</strong>呢？我觉得很好理解，具有共性的事物可以定义为一类，比如人，车，动物。但是具有共性的事物不一定都有相同的属性，人类有不同的性格，动物有不同的习性，车有不同的定位。 引用教程中的定义</p>
+<blockquote>
+<p>一个类可以实例化多个对象，每个对象亦可以有不同的属性</p>
+</blockquote>
+<h3 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h3><ol>
+<li>封装(Encapsulation)<blockquote>
+<p>我们给定义好的类和对象赋予值，然后进行打包</p>
+</blockquote>
+</li>
+<li>继承(Inheritance)<blockquote>
+<p>可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展</p>
+</blockquote>
+</li>
+<li>多态(Polymorphism)<blockquote>
+<p>允许将子类类型的指针赋值给父类类型的指针</p>
+</blockquote>
+<h3 id="面向对象举例代码"><a href="#面向对象举例代码" class="headerlink" title="面向对象举例代码"></a>面向对象举例代码</h3></li>
+</ol>
+<p>通过下面的这个小程序，就可以了解到OOP的基本使用方法和OOP如何实现继承特性。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BankAccount</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age)</span>:</span></span><br><span class="line">        self.balance = <span class="number">0</span></span><br><span class="line">        self.name=name</span><br><span class="line">        self.age=age</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">accountinfo</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"Account Info"</span>)</span><br><span class="line">        print(<span class="string">"Name:"</span>,self.name)</span><br><span class="line">        print(<span class="string">"Age:"</span>,self.age)</span><br><span class="line">        print(<span class="string">"Balance:"</span>,self.balance)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(BankAccount)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,age,amount)</span>:</span></span><br><span class="line">        BankAccount.__init__(self,name,age)</span><br><span class="line">        self.amount=amount</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">withdraw</span><span class="params">(self, amount)</span>:</span></span><br><span class="line">        self.balance -= amount</span><br><span class="line">        <span class="keyword">return</span> self.balance</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">deposit</span><span class="params">(self, amount)</span>:</span></span><br><span class="line">        self.balance += amount</span><br><span class="line">        <span class="keyword">return</span> self.balance</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    p1=Person(<span class="string">'Hao'</span>,<span class="number">24</span>,<span class="literal">None</span>)</span><br><span class="line">    p1.deposit(<span class="number">1000</span>)</span><br><span class="line">    p1.withdraw(<span class="number">500</span>)</span><br><span class="line">    p1.accountinfo()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,229 +253,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/08/Python-OOP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/26/Python-Basics-Summary/" class="archive-article-date">
-  	<time datetime="2020-05-27T00:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/26/Python-Basics-Summary/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python-Basics-Summary</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/26/Python-Basics-Summary/">Python-Basics-Summary</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/22/Day3-Python-Functions/" class="archive-article-date">
-  	<time datetime="2020-05-22T19:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/22/Day3-Python-Functions/">Day3-Python-Functions</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/21/Day2-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-21T19:26:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/21/Day2-Python-Basics/">Day2-Python-Basics</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Day1-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-15T23:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Day1-Python-Basics/">Day1-Python-Basics</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Python/" class="archive-article-date">
-  	<time datetime="2020-05-15T16:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Python/">Python Questions</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -438,9 +375,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
