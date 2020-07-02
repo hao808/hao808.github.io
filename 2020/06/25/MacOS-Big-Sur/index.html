@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Apple | I can do something</title>
+  <title>MacOS-Big-Sur | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/tags/Apple/index.html">
+  <meta name="description" content="前言在周一的WWDC20上，苹果公司介绍了全新一代的MacOS：MacOS-Big-Sur。而这次的WWDC，苹果不仅推出了全新一代的操作系统，也随之带来了为新Mac自主研发的芯片。而说到芯片，就不能不提到架构。而提到架构，就不能不说计算机的一些基本知识。我想用这篇文章来一起总结一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS-Big-Sur">
+<meta property="og:url" content="http://yoursite.com/2020/06/25/MacOS-Big-Sur/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="前言在周一的WWDC20上，苹果公司介绍了全新一代的MacOS：MacOS-Big-Sur。而这次的WWDC，苹果不仅推出了全新一代的操作系统，也随之带来了为新Mac自主研发的芯片。而说到芯片，就不能不提到架构。而提到架构，就不能不说计算机的一些基本知识。我想用这篇文章来一起总结一下。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/uploads/basic_structure.png">
+<meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018012204.png">
+<meta property="og:image" content="https://zacharyratliff.org/images/add_isa.png">
+<meta property="article:published_time" content="2020-06-25T17:53:09.000Z">
+<meta property="article:modified_time" content="2020-07-02T19:19:35.470Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Apple">
+<meta property="article:tag" content="MacOS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://media.geeksforgeeks.org/wp-content/uploads/basic_structure.png">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
   
@@ -148,36 +158,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MacOS-Big-Sur" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MacOS-Big-Sur
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/25/MacOS-Big-Sur/" class="archive-article-date">
+
+        
+        <a href="/2020/06/25/MacOS-Big-Sur/" class="archive-article-date">
   	<time datetime="2020-06-25T17:53:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/25/MacOS-Big-Sur/">MacOS-Big-Sur</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在周一的WWDC20上，苹果公司介绍了全新一代的MacOS：MacOS-Big-Sur。而这次的WWDC，苹果不仅推出了全新一代的操作系统，也随之带来了为新Mac自主研发的芯片。而说到芯片，就不能不提到架构。而提到架构，就不能不说计算机的一些基本知识。我想用这篇文章来一起总结一下。</p>
+<a id="more"></a>
+<h1 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><p>稍微对计算机有一些了解的人应该都听说过CPU，而其中绝大多数人也了解CPU在电脑中起到的作用，但我在这里不妨再总结一次。<strong>CPU（中央处理器）</strong> 一听这个这个名就觉得很高大上，没错在计算机上发生的所有运算和数据的交互和运用都会通过CPU来完成。<strong>冯·诺伊曼</strong>阐述的CPU的工作原理可分为四步：<strong>提取，解码，执行和写回</strong>。</p>
+<h2 id="Von-Neumann-Architectue"><a href="#Von-Neumann-Architectue" class="headerlink" title="Von Neumann Architectue"></a>Von Neumann Architectue</h2><p><img src="https://media.geeksforgeeks.org/wp-content/uploads/basic_structure.png" alt="alt"><br>通过上面的图我们可以发现CPU实际上是控制单元和运算单元的一种合并。而冯·诺伊曼提出的这种计算机架构也一直沿用至今。</p>
+<h1 id="x86？ARM？"><a href="#x86？ARM？" class="headerlink" title="x86？ARM？"></a>x86？ARM？</h1><p>如果你不知道这两个是什么？没有关系，其实我也不怎么了解，不然我为什么要写这篇blog呢？上文我简单了说了关于一些CPU的基本概念，而我们还需要知道的是CPU有两种分类：<strong>精简指令集</strong>和<strong>复杂指令集</strong>而x86和ARM分别代表这两种指令集。在我们讨论这两种指令集之前，我们不妨说一下什么是指令集。<br><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018012204.png" alt="alt"></p>
+<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><p>在CPU工作中，也需要执行指令，而每一次CPU指令指令，都需要调用控制信息，地址信息和数据信息，而这些指令的集合我们就可以看作是一个指令集。换句话说，当我们电脑执行一次简单的运算，（例如1+1=2）使用者需要告诉计算机执行什么操作，从哪里调取数据（LOAD），如何进行运算（ADD），和如何存储运算结果（STORE）。而很显然我们需要执行的是加法运算，所以CPU调用加法指令来完成我们的指令。而所有的这些指令集都是二进制代码形式来存在的，也就是我们熟知的0和1。之前的文章提到了，二进制代码是机器语言，所以人们用<strong>汇编语言</strong>来标记指令代码，而后来我们发明了高级语言，也就是我们现在的编程语言。但道理还是一样，最终都需要翻译成二进制代码。在这里我就不具体展开指令集的内容了，我们在编程时使用的编程语言不同，而我们现在也可以理解为什么指令集也有不同了。简单来说，无论是精简指令集还是复杂指令集，他们都能办事，只是他们的办事发放不一样罢了。<br><a href="https://www.jianshu.com/p/39325938a73a" target="_blank" rel="noopener">好文章</a><br><strong>An example of Instruction Set Architectue</strong><br><img src="https://zacharyratliff.org/images/add_isa.png" alt="alt"></p>
+<h2 id="复杂指令集（x86）"><a href="#复杂指令集（x86）" class="headerlink" title="复杂指令集（x86）"></a>复杂指令集（x86）</h2><p>如果你不知道什么是x86，但你一定知道Intel是什么？如果你的个人计算机现在使的是Intel酷睿的CPU，那么大概率你的个人计算机就是x86架构的。所以Intel开发的x86是复杂指令集的代表。我们如何理解复杂指令集呢？在这里我举个例子，比如我们去买东西，我们选好时间，地点和物品，，然后我们出发就可以了。而需要强调的是这一系列过程我们需要一次完成。那x86代表着Intel代号8086的CPU的家族统称。</p>
+<h2 id="精简指令集（ARM）"><a href="#精简指令集（ARM）" class="headerlink" title="精简指令集（ARM）"></a>精简指令集（ARM）</h2><p>如果你不知道什么是ARM，但你一定知道iPhone。iPhone使用的处理器都是都是已ARM为基础架构的。当然了也是WWDC上的重头戏，Apple为<strong>Mac</strong>自研的CPU也是<strong>ARM</strong>架构的。这也就不难理解为什么iPhone上的app未来也可以在Mac上运行了。我再来用买东西作为例子去解释精简指令集。例如：我周五要去买东西。买什么呢？买手机。去哪买呢？Apple store。看出区别了嘛？我们把一个复杂的过程拆分成若干个指令来分别执行。其实我觉得挺像我们编程时的面向过程的。每个指令都比较简单且短小，执行完一个再去执行下一个。 但是如果要处理更繁琐的要求，就需要更多的指令来完成。</p>
+<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>还有一些其他零零碎碎的关于CPU的知识，在这里说一下</p>
+<ul>
+<li>CPU字长<br>我们的计算机在位数上各不同是因为CPU字长不同所导致的。现在我们熟悉的64位架构是什么意思呢？上文提到了，CPU所处理的数据是一段二进制代码，这些二进制代码分别代表着用户像计算机所下达的操作指令，而64所指的是，CPU在单位时间内处理长度为64bit的二进制数据。32位同理。</li>
+<li>寻址空间<br>聊完CPU字长，我们来说内存。因为在CPU处理命令过程中，内存的作用非同小可。而我们也都听说过内存的大小，影响着计算机运行的速度。这一说法如何解释呢？拿32位CPU举例，其寻址空间位2的32次方，也就是4GB左右。这说明32位CPU最大寻址空间为4GB。如果在此计算机上执行太过复杂的运算或命令，那么计算机卡顿或者不相应也就不足为奇了。<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1>这次Apple介绍的芯片，提起了我想要了解CPU的兴趣，但短时间内的了解和研究，还远远达不到烂熟于胸的程度。这篇文章也只是从兴趣的角度出发，宏观的阐述了一些关于CPU的概念。如果想要深入的了解与学习，想必还得更多的下下功夫。Peace✌️</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,61 +235,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/25/MacOS-Big-Sur/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/16/Why-MacOS/" class="archive-article-date">
-  	<time datetime="2020-05-17T01:31:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/08/Python-OOP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python-OOP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/16/Why-MacOS/">Why MacOS?</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Apple</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MacOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -270,9 +357,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
