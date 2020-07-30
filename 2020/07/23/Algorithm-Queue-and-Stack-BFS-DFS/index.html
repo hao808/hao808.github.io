@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Blockchain | I can do something</title>
+  <title>Algorithm:Queue-and-Stack(BFS/DFS) | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/tags/Blockchain/index.html">
+  <meta name="description" content="前言从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithm:Queue-and-Stack(BFS&#x2F;DFS)">
+<meta property="og:url" content="http://yoursite.com/2020/07/23/Algorithm-Queue-and-Stack-BFS-DFS/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="前言从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595476446058&di=ba5fc86eb5c4b975882bcf685b027fc1&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D3513571897%252C2845634851%2526fm%253D214%2526gp%253D0.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595753884302&di=cc7d7581f90deede9f7af4e58407584e&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D202762492%252C2516350438%2526fm%253D214%2526gp%253D0.jpg">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190628103427172.png">
+<meta property="article:published_time" content="2020-07-23T00:28:18.000Z">
+<meta property="article:modified_time" content="2020-07-30T03:45:40.225Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595476446058&di=ba5fc86eb5c4b975882bcf685b027fc1&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D3513571897%252C2845634851%2526fm%253D214%2526gp%253D0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
   
@@ -148,64 +157,197 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Algorithm-Queue-and-Stack-BFS-DFS" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/19/Blockchain-Python/" class="archive-article-date">
-  	<time datetime="2020-07-19T02:05:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/19/Blockchain-Python/">Blockchain-Python</a>
+    <h1 class="article-title" itemprop="name">
+      Algorithm:Queue-and-Stack(BFS/DFS)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/07/23/Algorithm-Queue-and-Stack-BFS-DFS/" class="archive-article-date">
+  	<time datetime="2020-07-23T00:28:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提<strong>深度</strong>和<strong>广度</strong>搜索，而提及深度和广度，我们就得说到说到<strong>队列</strong>和<strong>栈</strong>。</p>
+<a id="more"></a>
+
+<h2 id="数据结构：栈和队列"><a href="#数据结构：栈和队列" class="headerlink" title="数据结构：栈和队列"></a>数据结构：栈和队列</h2><h3 id="栈（Stack）"><a href="#栈（Stack）" class="headerlink" title="栈（Stack）"></a>栈（Stack）</h3><p>熟悉编程的人都应该听说过这个网站（Stackoverflow），这里面的Stack就是我今天介绍的栈，而Stackoverflow代表着栈溢出的意思。栈的特点有什么呢？什么又是栈溢出呢？<br>先来说说栈：</p>
+<ol>
+<li>一种数据结构的表现用来储存数据</li>
+<li>栈可以用list来实现</li>
+<li>Last-in，First-out</li>
+<li>只能从顶部进栈和出栈<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595476446058&di=ba5fc86eb5c4b975882bcf685b027fc1&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D3513571897%2C2845634851%26fm%3D214%26gp%3D0.jpg" alt="alt"><h4 id="栈溢出（Stackoverflow）"><a href="#栈溢出（Stackoverflow）" class="headerlink" title="栈溢出（Stackoverflow）"></a>栈溢出（Stackoverflow）</h4>在这里简单解释一下这个问题，不会深入展开。我们都知道任何关于数据的操作都会调用计算机的内存，而当我们的程序超出内存的承载范围就会发生溢出的情况。<blockquote>
+<p>在Python中，函数调用是通过栈（stack）这种数据结构实现的，每当进入一个函数调用，栈就会加一层栈帧，每当函数返回，栈就会减一层栈帧。由于栈的大小不是无限的，所以，递归调用的次数过多，会导致栈溢出<br><a href="https://baike.baidu.com/item/%E6%A0%88%E6%BA%A2%E5%87%BA/8538051?fr=aladdin" target="_blank" rel="noopener">From Baidu</a></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="栈实现"><a href="#栈实现" class="headerlink" title="栈实现"></a>栈实现</h4><p>根据下面的代码可以验证上述栈的特点</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.new_stack=[]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.new_stack==[]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">push</span><span class="params">(self,data)</span>:</span></span><br><span class="line">        self.new_stack.append(data)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pop</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.new_stack.pop()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">top_value</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(self.new_stack)&gt;<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> self.new_stack[<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">s1=Stack()</span><br><span class="line">s1.push(<span class="string">"I"</span>)</span><br><span class="line">s1.push(<span class="string">"created"</span>)</span><br><span class="line">s1.push(<span class="string">"a"</span>)</span><br><span class="line">s1.push(<span class="string">"stack"</span>)</span><br><span class="line">print(<span class="string">"********"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(s1.new_stack)):</span><br><span class="line">    print(s1.new_stack[i])</span><br><span class="line"></span><br><span class="line">print(s1.top_value())</span><br><span class="line">print(<span class="string">"********"</span>)</span><br><span class="line">s1.pop()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(s1.new_stack)):</span><br><span class="line">    print(s1.new_stack[i])</span><br><span class="line"></span><br><span class="line">print(s1.top_value())</span><br></pre></td></tr></table></figure>
+
+<h3 id="队列（Queue）"><a href="#队列（Queue）" class="headerlink" title="队列（Queue）"></a>队列（Queue）</h3><p>队列是另一种<strong>数据结构</strong>的表现形式，我们应该怎么理解队列呢？队列跟栈又有什么区别呢？</p>
+<ol>
+<li>数据结构的一种表现形式</li>
+<li>队列可以用<strong>列表</strong>和<strong>链表</strong>来实现</li>
+<li>First-in, First out(先进先出)-其实就按字面意思理解即可，咱们日常怎么排队，队列在代码中就怎么工作，原理是一样的。<h4 id="链表实现"><a href="#链表实现" class="headerlink" title="链表实现"></a>链表实现</h4><blockquote>
+<p>链表是由一系列节点（Node）组成的队列，每个节点包含两个要素（data，next).通过节点之间的串联，从而形成一个链表。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595753884302&di=cc7d7581f90deede9f7af4e58407584e&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D202762492%2C2516350438%26fm%3D214%26gp%3D0.jpg" alt="alt"></p>
+</blockquote>
+</li>
+</ol>
+<p>我们可以大概总结一下，要想完成链表的实现，首先我们的程序需要先构造头节点：<strong>Head</strong>，然后构造数据基础结构：<strong>Node</strong>，最后在构造队列。<br><img src="https://img-blog.csdnimg.cn/20190628103427172.png" alt="alt"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,data,next= None)</span>:</span></span><br><span class="line">        self.data= data</span><br><span class="line">        self.next= next</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Queue</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#Head</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.left= <span class="literal">None</span></span><br><span class="line">        self.right= <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.left <span class="keyword">is</span> <span class="literal">None</span></span><br><span class="line">    <span class="comment">#Add</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">enqueue</span><span class="params">(self,data)</span>:</span></span><br><span class="line">        next_node= Node(data)</span><br><span class="line">        <span class="keyword">if</span> self.is_empty():</span><br><span class="line">            self.left= next_node</span><br><span class="line">            self.right= next_node</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.right.next=next_node</span><br><span class="line">            self.right=next_node</span><br><span class="line">    <span class="comment">#Delete</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">dequeue</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.is_empty():</span><br><span class="line">            print(<span class="string">"Empty!!!"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            item=self.left.data</span><br><span class="line">            self.left=self.left.next</span><br><span class="line">            <span class="keyword">return</span> item</span><br><span class="line">    <span class="comment">#Print</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_queue</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"*******"</span>)</span><br><span class="line">        <span class="comment">#r=self.right</span></span><br><span class="line">        n=self.left</span><br><span class="line">        p=[]</span><br><span class="line">        <span class="keyword">while</span> n <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="comment">#p.append(n)</span></span><br><span class="line">            p.append(n.data)</span><br><span class="line">            <span class="comment">#p.append(n.next)</span></span><br><span class="line">            n=n.next</span><br><span class="line">        print(p)</span><br><span class="line"></span><br><span class="line">myqueue=Queue()</span><br><span class="line">myqueue.enqueue(<span class="string">'hao'</span>)</span><br><span class="line">myqueue.enqueue(<span class="string">'1995'</span>)</span><br><span class="line">myqueue.enqueue(<span class="string">'beijing'</span>)</span><br><span class="line">myqueue.print_queue()</span><br><span class="line">print(myqueue.left.data)</span><br><span class="line">print(myqueue.right.data)</span><br><span class="line">print(myqueue.left.next.data)</span><br><span class="line"><span class="comment">#myqueue.dequeue()</span></span><br><span class="line"><span class="comment">#myqueue.print_queue()</span></span><br></pre></td></tr></table></figure>
+<p>指定位置插入数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self,pos,data)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.is_empty():</span><br><span class="line">            print(<span class="string">"Empty"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            insert_node=Node(data)</span><br><span class="line">            item=self.left</span><br><span class="line">            i=<span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i&lt;(pos<span class="number">-1</span>):</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">                item=item.next</span><br><span class="line">            insert_node.next=item.next</span><br><span class="line">            item.next=insert_node</span><br><span class="line"></span><br><span class="line">myqueue.insert(<span class="number">3</span>,<span class="string">'24'</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>未完待续</strong>。。。。</p>
+<h2 id="搜索算法：深度和广度"><a href="#搜索算法：深度和广度" class="headerlink" title="搜索算法：深度和广度"></a>搜索算法：深度和广度</h2><h3 id="深度搜索（Deep-first-search）"><a href="#深度搜索（Deep-first-search）" class="headerlink" title="深度搜索（Deep-first-search）"></a>深度搜索（Deep-first-search）</h3><h3 id="广度搜索（Breadth-first-search）"><a href="#广度搜索（Breadth-first-search）" class="headerlink" title="广度搜索（Breadth-first-search）"></a>广度搜索（Breadth-first-search）</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Blockchain</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/23/Algorithm-Queue-and-Stack-BFS-DFS/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/07/19/Blockchain-Python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Blockchain-Python</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -228,9 +370,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
