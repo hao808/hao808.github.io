@@ -8,20 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Algorithm:Queue-and-Stack(BFS/DFS) | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
+  <meta name="description" content="前言这一篇写一点关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algorithm:Queue-and-Stack(BFS&#x2F;DFS)">
 <meta property="og:url" content="http://yoursite.com/2020/07/23/Algorithm-Queue-and-Stack-BFS-DFS/index.html">
 <meta property="og:site_name" content="I can do something">
-<meta property="og:description" content="前言从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
+<meta property="og:description" content="前言这一篇写一点关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提深度和广度搜索，而提及深度和广度，我们就得说到说到队列和栈。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595476446058&di=ba5fc86eb5c4b975882bcf685b027fc1&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D3513571897%252C2845634851%2526fm%253D214%2526gp%253D0.jpg">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595753884302&di=cc7d7581f90deede9f7af4e58407584e&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D202762492%252C2516350438%2526fm%253D214%2526gp%253D0.jpg">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190628103427172.png">
+<meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4232698474,3934707838&fm=26&gp=0.jpg">
 <meta property="article:published_time" content="2020-07-23T00:28:18.000Z">
-<meta property="article:modified_time" content="2020-07-30T03:45:40.225Z">
+<meta property="article:modified_time" content="2020-08-26T05:16:18.994Z">
 <meta property="article:author" content="Tianhao Cui">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595476446058&di=ba5fc86eb5c4b975882bcf685b027fc1&imgtype=0&src=http%253A%252F%252Fimg2.imgtn.bdimg.com%252Fit%252Fu%253D3513571897%252C2845634851%2526fm%253D214%2526gp%253D0.jpg">
   
@@ -177,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从这篇开始，写一写关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提<strong>深度</strong>和<strong>广度</strong>搜索，而提及深度和广度，我们就得说到说到<strong>队列</strong>和<strong>栈</strong>。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这一篇写一点关于算法的内容。算法虽然复杂，难度相对较高，但想要迈向更高的台阶，我们又得掌握其中的奥秘。说到算法，我们就不能不提搜索，说到搜索，我们就不能不提<strong>深度</strong>和<strong>广度</strong>搜索，而提及深度和广度，我们就得说到说到<strong>队列</strong>和<strong>栈</strong>。</p>
 <a id="more"></a>
 
 <h2 id="数据结构：栈和队列"><a href="#数据结构：栈和队列" class="headerlink" title="数据结构：栈和队列"></a>数据结构：栈和队列</h2><h3 id="栈（Stack）"><a href="#栈（Stack）" class="headerlink" title="栈（Stack）"></a>栈（Stack）</h3><p>熟悉编程的人都应该听说过这个网站（Stackoverflow），这里面的Stack就是我今天介绍的栈，而Stackoverflow代表着栈溢出的意思。栈的特点有什么呢？什么又是栈溢出呢？<br>先来说说栈：</p>
@@ -207,8 +209,35 @@
 <p>指定位置插入数据</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert</span><span class="params">(self,pos,data)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.is_empty():</span><br><span class="line">            print(<span class="string">"Empty"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            insert_node=Node(data)</span><br><span class="line">            item=self.left</span><br><span class="line">            i=<span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> i&lt;(pos<span class="number">-1</span>):</span><br><span class="line">                i+=<span class="number">1</span></span><br><span class="line">                item=item.next</span><br><span class="line">            insert_node.next=item.next</span><br><span class="line">            item.next=insert_node</span><br><span class="line"></span><br><span class="line">myqueue.insert(<span class="number">3</span>,<span class="string">'24'</span>)</span><br></pre></td></tr></table></figure>
 
-<p><strong>未完待续</strong>。。。。</p>
-<h2 id="搜索算法：深度和广度"><a href="#搜索算法：深度和广度" class="headerlink" title="搜索算法：深度和广度"></a>搜索算法：深度和广度</h2><h3 id="深度搜索（Deep-first-search）"><a href="#深度搜索（Deep-first-search）" class="headerlink" title="深度搜索（Deep-first-search）"></a>深度搜索（Deep-first-search）</h3><h3 id="广度搜索（Breadth-first-search）"><a href="#广度搜索（Breadth-first-search）" class="headerlink" title="广度搜索（Breadth-first-search）"></a>广度搜索（Breadth-first-search）</h3>
+<h2 id="搜索算法：深度和广度"><a href="#搜索算法：深度和广度" class="headerlink" title="搜索算法：深度和广度"></a>搜索算法：深度和广度</h2><p>第一次看到搜索算法，还是前几月上网课听到的，当时听起来没那么复杂阿，但看了个网课给的作业直接给我干懵了，这不还是验证了写代码这东西，光看懂还真不大行。:(<br>给来个网课的链接：<a href="https://cs50.harvard.edu/ai/" target="_blank" rel="noopener">https://cs50.harvard.edu/ai/</a></p>
+<p>如何理解搜索算法呢？</p>
+<ol>
+<li>我们可以把搜索想像成走迷宫，我们有一个<strong>初始点</strong>和<strong>目标点</strong>，为了完成从初始点到目标点的过程，我们需要遍临两点中间其他的点，而在遍临点位中，根据要求不同，所走的路径也会有所区别。从初始点到目标点的路径，我个人认为就是我们所谓的搜索算法。而深度和广度，我们直接就可以从字面上来理解了。</li>
+</ol>
+<p>例如：如何从A点走到D点<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4232698474,3934707838&fm=26&gp=0.jpg" alt="alt"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">maze=&#123;</span><br><span class="line">    <span class="string">'A'</span>:[<span class="string">'B'</span>,<span class="string">'E'</span>],</span><br><span class="line">    <span class="string">'B'</span>:[<span class="string">'C'</span>,<span class="string">'D'</span>],</span><br><span class="line">    <span class="string">'C'</span>:[<span class="string">'B'</span>],</span><br><span class="line">    <span class="string">'D'</span>:[<span class="string">'B'</span>],</span><br><span class="line">    <span class="string">'E'</span>:[<span class="string">'F'</span>],</span><br><span class="line">    <span class="string">'F'</span>:[<span class="string">'E'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="深度搜索（Deep-first-search）"><a href="#深度搜索（Deep-first-search）" class="headerlink" title="深度搜索（Deep-first-search）"></a>深度搜索（Deep-first-search）</h3><p>特点：</p>
+<ol>
+<li>栈实现</li>
+<li>走到无路径可走<blockquote>
+<p>每次从栈的尾部弹出一个元素，搜算与其相连的下一个元素，直到下一元素没有与其相连的节点，如果是目标值则返回，反之退回上一元素，寻找有无与上一元素相连的其他节点。</p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">DFS</span><span class="params">(graph,s)</span>:</span></span><br><span class="line">    stack=[]</span><br><span class="line">    stack.append(s)</span><br><span class="line">    seen=set()<span class="comment">#看是否访问过</span></span><br><span class="line">    seen.add(s)</span><br><span class="line">    <span class="keyword">while</span> (len(stack)&gt;<span class="number">0</span>):</span><br><span class="line">        <span class="comment">#print(stack)</span></span><br><span class="line">        route=stack.pop()</span><br><span class="line">        nodes=graph[route]</span><br><span class="line">        <span class="comment">#print(nodes)</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> nodes:</span><br><span class="line">            <span class="keyword">if</span> n <span class="keyword">not</span> <span class="keyword">in</span> seen:<span class="comment">#判断是否访问过</span></span><br><span class="line">                stack.append(n)</span><br><span class="line">                seen.add(n)</span><br><span class="line">        print(route)</span><br><span class="line">DFS(maze,<span class="string">'A'</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="广度搜索（Breadth-first-search）"><a href="#广度搜索（Breadth-first-search）" class="headerlink" title="广度搜索（Breadth-first-search）"></a>广度搜索（Breadth-first-search）</h3><p>特点：</p>
+<ol>
+<li>队列实现</li>
+<li>不一定找到最优路径<blockquote>
+<p>从包含初始状态的节点开始，依次向下探索，层序遍历 </p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">BFS</span><span class="params">(graph,s)</span>:</span></span><br><span class="line">    queue=[]</span><br><span class="line">    queue.append(s)</span><br><span class="line">    seen=set()</span><br><span class="line">    seen.add(s)</span><br><span class="line">    <span class="keyword">while</span> (len(queue)&gt;<span class="number">0</span>):</span><br><span class="line">        print(queue)</span><br><span class="line">        vertex=queue.pop(<span class="number">0</span>)</span><br><span class="line">        nodes=graph[vertex]</span><br><span class="line">        <span class="comment">#print(nodes)</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> nodes:</span><br><span class="line">            <span class="keyword">if</span> n <span class="keyword">not</span> <span class="keyword">in</span> seen:<span class="comment">#判断是否访问过</span></span><br><span class="line">                queue.append(n)</span><br><span class="line">                seen.add(n)</span><br><span class="line">        <span class="comment">#print(vertex)</span></span><br><span class="line">BFS(maze,<span class="string">'A'</span>)</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -242,7 +271,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
@@ -432,11 +465,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color5">Code</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Code</a>
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
