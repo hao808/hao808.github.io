@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190628103427172.png">
 <meta property="og:image" content="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4232698474,3934707838&fm=26&gp=0.jpg">
 <meta property="article:published_time" content="2020-07-23T00:28:18.000Z">
-<meta property="article:modified_time" content="2020-08-26T05:16:18.994Z">
+<meta property="article:modified_time" content="2020-08-26T05:22:15.520Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Algorithm">
@@ -232,11 +232,12 @@
 <ol>
 <li>队列实现</li>
 <li>不一定找到最优路径<blockquote>
-<p>从包含初始状态的节点开始，依次向下探索，层序遍历 </p>
+<p>从包含初始状态的节点开始，依次向下探索，层序遍历</p>
 </blockquote>
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">BFS</span><span class="params">(graph,s)</span>:</span></span><br><span class="line">    queue=[]</span><br><span class="line">    queue.append(s)</span><br><span class="line">    seen=set()</span><br><span class="line">    seen.add(s)</span><br><span class="line">    <span class="keyword">while</span> (len(queue)&gt;<span class="number">0</span>):</span><br><span class="line">        print(queue)</span><br><span class="line">        vertex=queue.pop(<span class="number">0</span>)</span><br><span class="line">        nodes=graph[vertex]</span><br><span class="line">        <span class="comment">#print(nodes)</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> nodes:</span><br><span class="line">            <span class="keyword">if</span> n <span class="keyword">not</span> <span class="keyword">in</span> seen:<span class="comment">#判断是否访问过</span></span><br><span class="line">                queue.append(n)</span><br><span class="line">                seen.add(n)</span><br><span class="line">        <span class="comment">#print(vertex)</span></span><br><span class="line">BFS(maze,<span class="string">'A'</span>)</span><br></pre></td></tr></table></figure>
+<p>Updated on 8/26/20</p>
 
       
 
@@ -473,11 +474,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
