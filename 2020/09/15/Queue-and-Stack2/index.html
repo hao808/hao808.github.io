@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | I can do something</title>
+  <title>Queue-and-Stack2 | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="I can do something">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
+  <meta name="description" content="前言上一篇文章提到了哈佛大学的一个网课，其中有一个关于搜索算法的练习题还是值得我们思考一下的。 Six degrees of separation(六度分离)这个问题的名字听起来很高端，但其实也不难理解。其中心思想大概就是我们与任何一个陌生人之间所间隔的人不会超过五个。换句话说，我们想认识任何一个人，最多只需要通过五个人的接触。每个人与人之间的联系我们可以假设为一度，这样一来我们可以通过对度的计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Queue-and-Stack2">
+<meta property="og:url" content="http://yoursite.com/2020/09/15/Queue-and-Stack2/index.html">
 <meta property="og:site_name" content="I can do something">
+<meta property="og:description" content="前言上一篇文章提到了哈佛大学的一个网课，其中有一个关于搜索算法的练习题还是值得我们思考一下的。 Six degrees of separation(六度分离)这个问题的名字听起来很高端，但其实也不难理解。其中心思想大概就是我们与任何一个陌生人之间所间隔的人不会超过五个。换句话说，我们想认识任何一个人，最多只需要通过五个人的接触。每个人与人之间的联系我们可以假设为一度，这样一来我们可以通过对度的计算">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-15T04:42:17.000Z">
+<meta property="article:modified_time" content="2020-10-16T05:02:56.221Z">
 <meta property="article:author" content="Tianhao Cui">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
@@ -148,36 +154,77 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Queue-and-Stack2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Day1-Python-Basics/" class="archive-article-date">
-  	<time datetime="2020-05-15T10:28:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Day1-Python-Basics/">Day1-Python-Basics</a>
+    <h1 class="article-title" itemprop="name">
+      Queue-and-Stack2
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/15/Queue-and-Stack2/" class="archive-article-date">
+  	<time datetime="2020-09-15T04:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇文章提到了哈佛大学的一个网课，其中有一个关于搜索算法的练习题还是值得我们思考一下的。</p>
+<h2 id="Six-degrees-of-separation-六度分离"><a href="#Six-degrees-of-separation-六度分离" class="headerlink" title="Six degrees of separation(六度分离)"></a>Six degrees of separation(六度分离)</h2><p>这个问题的名字听起来很高端，但其实也不难理解。其中心思想大概就是我们与任何一个陌生人之间所间隔的人不会超过五个。换句话说，我们想认识任何一个人，最多只需要通过五个人的接触。每个人与人之间的联系我们可以假设为一度，这样一来我们可以通过对<strong>度</strong>的计算来实现搜索的目的。</p>
+<h2 id="问题来了？"><a href="#问题来了？" class="headerlink" title="问题来了？"></a>问题来了？</h2><p>给出三个.csv文档(movies,people,stars),通过列表之间的相同信息，找出初始明星(source)与目标明星(target)通过参演过的电影的最短关联程度。例如，A与B共同参演过一部电影，其分离度则为<strong>1</strong>，反之每增加一个中间人，其分离度需增加一度。<br>csv文件格式如下<br><strong>movies.csv</strong><br>| id | title | year |<br>|:—–|:—–|:—–|<br>| <strong>** |**</strong> | <strong>** |<br>**people.csv</strong><br>| id | name | birth |<br>|:—–|:—–|:—–|<br>| <strong>** |**</strong> | <strong>** |<br>**stars.csv</strong><br>| person_id | movie_id|<br>|:—–|:—–|<br>| <strong>** |**</strong>|</p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>要处理csv数据，肯定需要先处理和加载到程序里，在这个项目中，出题者直接把大部分代码展示了出来，而我们所需要完成的是找出路径或者说是找出度的部分。项目文件链接如下<a href="https://cdn.cs50.net/ai/2020/x/projects/0/degrees.zip" target="_blank" rel="noopener">degrees.zip</a></p>
+<h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><p>虽然处理数据的代码已经写好了，但我们还得知道数据在被加载后的数据结构是什么样的？</p>
+<ol>
+<li>首先在加载数据之前，程序先定义了三个集(names,people,movies)</li>
+<li>数据在经过程序处理后，数据结构如下：</li>
+</ol>
+<p><strong>names</strong><br>{‘kevin bacon’:{‘102’},省略…}<br><strong>people</strong><br>{‘102’:{‘name’:’Kevin Bacon’,’birth’:’1958’,’movies’:{‘104257’,’112384’}},省略…}<br><strong>movies</strong><br>{‘112384’:{‘title’:’Apollo 13’,’year’:’1995’,’stars’:{‘102’,’158’,’200’,’641’}},省略…}</p>
+<h3 id="Stack-Queue"><a href="#Stack-Queue" class="headerlink" title="Stack/Queue"></a>Stack/Queue</h3><h4 id="如何构造节点？"><a href="#如何构造节点？" class="headerlink" title="如何构造节点？"></a>如何构造节点？</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, state, parent, action)</span>:</span></span><br><span class="line">        self.state = state</span><br><span class="line">        self.parent = parent</span><br><span class="line">        self.action = action</span><br></pre></td></tr></table></figure>
+<p>我们在搜算算法中所要寻找的目标值是储存在节点上的，但是节点只能储存数据不能搜算。如果我们想要实现搜算，需要引入Frontier去管理节点 <a href="https://doraemonzzz.com/2020/04/10/CS50%20Introduction%20to%20Artificial%20Intelligence%20with%20Python%20Lecture%201/" target="_blank" rel="noopener">Ref</a></p>
+<blockquote>
+<p>1.从包含初始状态的边界(frontier)开始<br>2.从一个空的探索集开始<br>3.重复：<br>如果边界为空，则无解。<br>从边界删除节点。<br>如果节点包含目标状态，请返回解。<br>将节点添加到探索集中。<br>拓展节点，如果结果节点不在边界或探索集中，则将它们添加到边界</p>
+</blockquote>
+<h4 id="如何实现栈和队列？"><a href="#如何实现栈和队列？" class="headerlink" title="如何实现栈和队列？"></a>如何实现栈和队列？</h4><p>这一部分没什么好说的，主要还是栈和队列的数据结构，上一篇已经提过了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StackFrontier</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.frontier = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, node)</span>:</span></span><br><span class="line">        self.frontier.append(node)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">contains_state</span><span class="params">(self, state)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> any(node.state == state <span class="keyword">for</span> node <span class="keyword">in</span> self.frontier)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.frontier) == <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.empty():</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">"empty frontier"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            node = self.frontier[<span class="number">-1</span>]</span><br><span class="line">            self.frontier = self.frontier[:<span class="number">-1</span>]</span><br><span class="line">            <span class="keyword">return</span> node</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QueueFrontier</span><span class="params">(StackFrontier)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">remove</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.empty():</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">"empty frontier"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            node = self.frontier[<span class="number">0</span>]</span><br><span class="line">            self.frontier = self.frontier[<span class="number">1</span>:]</span><br><span class="line">            <span class="keyword">return</span> node</span><br></pre></td></tr></table></figure>
+
+<h3 id="搜算算法实现"><a href="#搜算算法实现" class="headerlink" title="搜算算法实现"></a>搜算算法实现</h3><p>我们问题是如何搜索出最短的路径在起始人物和目标人物之间。既然我们的任务是找到最优解法，那么必然是选择BFS</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#存储最短路径</span></span><br><span class="line">res = []</span><br><span class="line"><span class="comment">#BFS队列实现</span></span><br><span class="line">queue=QueueFrontier()</span><br><span class="line"><span class="comment">#创建起始节点</span></span><br><span class="line">start=Node(source, <span class="literal">None</span>, <span class="literal">None</span>)</span><br><span class="line"><span class="comment">#将节点加入队列</span></span><br><span class="line">queue.add(start)</span><br><span class="line"><span class="comment">#创建已探索集</span></span><br><span class="line">Explored_set=set()</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment">#检查是否为空</span></span><br><span class="line">    <span class="keyword">if</span> queue.empty():</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    node = queue.remove()</span><br><span class="line">    state = node.state</span><br><span class="line">    print(state)</span><br><span class="line">    Explored_set.add(state)</span><br><span class="line">    <span class="comment">#搜算目前节点人物参演过的电影</span></span><br><span class="line">    <span class="keyword">for</span> movie <span class="keyword">in</span> people[state][<span class="string">'movies'</span>]:</span><br><span class="line">    <span class="comment">#搜索该电影出演的人员</span></span><br><span class="line">        <span class="keyword">for</span> person <span class="keyword">in</span> movies[movie][<span class="string">'stars'</span>]:</span><br><span class="line">    <span class="comment">#判断人员是否搜索过</span></span><br><span class="line">            <span class="keyword">if</span> person <span class="keyword">not</span> <span class="keyword">in</span> Explored_set:</span><br><span class="line">    <span class="comment">#判断人员是否为目标</span></span><br><span class="line">                <span class="keyword">if</span> person == target:</span><br><span class="line">    <span class="comment">#成功，储存路径并返回</span></span><br><span class="line">                    res.append((movie, person))</span><br><span class="line">                    <span class="keyword">while</span> node.parent <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                        res.append((node.action, node.state))</span><br><span class="line">                        node = node.parent</span><br><span class="line">                    res.reverse()</span><br><span class="line">                    <span class="keyword">return</span> res</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    child=Node(person,node,movie)</span><br><span class="line">                    queue.add(child)</span><br><span class="line"><span class="keyword">raise</span> NotImplementedError</span><br></pre></td></tr></table></figure>
+<p><a href="https://doraemonzzz.com/2020/04/10/CS50%20Introduction%20to%20Artificial%20Intelligence%20with%20Python%20Lecture%201/" target="_blank" rel="noopener">Source code原地址</a></p>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>上面展示的并不是完整的代码，只是把搜算这一部分拿出来总结。因为自己当时看到这个题目的时候不知道从何入手，所以值得把别人写好的代码再反复研究。<br>Updated on 10/16/2020</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,97 +234,111 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/15/Queue-and-Stack2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Python/" class="archive-article-date">
-  	<time datetime="2020-05-15T03:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/23/Algorithm-Queue-and-Stack-BFS-DFS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Algorithm:Queue-and-Stack(BFS/DFS)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Python/">Python Questions</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Code</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/15/Hello-World/" class="archive-article-date">
-  	<time datetime="2020-05-14T16:49:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/15/Hello-World/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -301,8 +362,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
