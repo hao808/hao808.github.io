@@ -16,7 +16,7 @@
 <meta property="og:description" content="前言上一篇文章提到了哈佛大学的一个网课，其中有一个关于搜索算法的练习题还是值得我们思考一下的。 Six degrees of separation(六度分离)这个问题的名字听起来很高端，但其实也不难理解。其中心思想大概就是我们与任何一个陌生人之间所间隔的人不会超过五个。换句话说，我们想认识任何一个人，最多只需要通过五个人的接触。每个人与人之间的联系我们可以假设为一度，这样一来我们可以通过对度的计算">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-15T04:42:17.000Z">
-<meta property="article:modified_time" content="2020-10-16T05:02:56.221Z">
+<meta property="article:modified_time" content="2020-10-16T05:31:40.191Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Algorithm">
@@ -176,6 +176,8 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上一篇文章提到了哈佛大学的一个网课，其中有一个关于搜索算法的练习题还是值得我们思考一下的。</p>
 <h2 id="Six-degrees-of-separation-六度分离"><a href="#Six-degrees-of-separation-六度分离" class="headerlink" title="Six degrees of separation(六度分离)"></a>Six degrees of separation(六度分离)</h2><p>这个问题的名字听起来很高端，但其实也不难理解。其中心思想大概就是我们与任何一个陌生人之间所间隔的人不会超过五个。换句话说，我们想认识任何一个人，最多只需要通过五个人的接触。每个人与人之间的联系我们可以假设为一度，这样一来我们可以通过对<strong>度</strong>的计算来实现搜索的目的。</p>
+<a id="more"></a>
+
 <h2 id="问题来了？"><a href="#问题来了？" class="headerlink" title="问题来了？"></a>问题来了？</h2><p>给出三个.csv文档(movies,people,stars),通过列表之间的相同信息，找出初始明星(source)与目标明星(target)通过参演过的电影的最短关联程度。例如，A与B共同参演过一部电影，其分离度则为<strong>1</strong>，反之每增加一个中间人，其分离度需增加一度。<br>csv文件格式如下<br><strong>movies.csv</strong><br>| id | title | year |<br>|:—–|:—–|:—–|<br>| <strong>** |**</strong> | <strong>** |<br>**people.csv</strong><br>| id | name | birth |<br>|:—–|:—–|:—–|<br>| <strong>** |**</strong> | <strong>** |<br>**stars.csv</strong><br>| person_id | movie_id|<br>|:—–|:—–|<br>| <strong>** |**</strong>|</p>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>要处理csv数据，肯定需要先处理和加载到程序里，在这个项目中，出题者直接把大部分代码展示了出来，而我们所需要完成的是找出路径或者说是找出度的部分。项目文件链接如下<a href="https://cdn.cs50.net/ai/2020/x/projects/0/degrees.zip" target="_blank" rel="noopener">degrees.zip</a></p>
 <h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><p>虽然处理数据的代码已经写好了，但我们还得知道数据在被加载后的数据结构是什么样的？</p>
@@ -432,6 +434,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -441,10 +447,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
               </li>
             
             <div class="clearfix"></div>
