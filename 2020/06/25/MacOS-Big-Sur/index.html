@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018012204.png">
 <meta property="og:image" content="https://zacharyratliff.org/images/add_isa.png">
 <meta property="article:published_time" content="2020-06-25T04:53:09.000Z">
-<meta property="article:modified_time" content="2020-07-02T19:19:35.470Z">
+<meta property="article:modified_time" content="2020-10-22T04:08:06.288Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Apple">
 <meta property="article:tag" content="MacOS">
@@ -182,14 +182,21 @@
 <a id="more"></a>
 <h1 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h1><p>稍微对计算机有一些了解的人应该都听说过CPU，而其中绝大多数人也了解CPU在电脑中起到的作用，但我在这里不妨再总结一次。<strong>CPU（中央处理器）</strong> 一听这个这个名就觉得很高大上，没错在计算机上发生的所有运算和数据的交互和运用都会通过CPU来完成。<strong>冯·诺伊曼</strong>阐述的CPU的工作原理可分为四步：<strong>提取，解码，执行和写回</strong>。</p>
 <h2 id="Von-Neumann-Architectue"><a href="#Von-Neumann-Architectue" class="headerlink" title="Von Neumann Architectue"></a>Von Neumann Architectue</h2><p><img src="https://media.geeksforgeeks.org/wp-content/uploads/basic_structure.png" alt="alt"><br>通过上面的图我们可以发现CPU实际上是控制单元和运算单元的一种合并。而冯·诺伊曼提出的这种计算机架构也一直沿用至今。</p>
-<h1 id="x86？ARM？"><a href="#x86？ARM？" class="headerlink" title="x86？ARM？"></a>x86？ARM？</h1><p>如果你不知道这两个是什么？没有关系，其实我也不怎么了解，不然我为什么要写这篇blog呢？上文我简单了说了关于一些CPU的基本概念，而我们还需要知道的是CPU有两种分类：<strong>精简指令集</strong>和<strong>复杂指令集</strong>而x86和ARM分别代表这两种指令集。在我们讨论这两种指令集之前，我们不妨说一下什么是指令集。<br><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018012204.png" alt="alt"></p>
+<h1 id="x86？ARM？"><a href="#x86？ARM？" class="headerlink" title="x86？ARM？"></a>x86？ARM？</h1><p>上篇文章我简单了说了关于一些CPU的基本概念，而我们还需要知道的是CPU有两种分类：<strong>精简指令集</strong>和<strong>复杂指令集</strong>而x86和ARM分别代表这两种指令集。在我们讨论这两种指令集之前，我们不妨说一下什么是指令集。<br><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018012204.png" alt="alt"></p>
 <h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><p>在CPU工作中，也需要执行指令，而每一次CPU指令指令，都需要调用控制信息，地址信息和数据信息，而这些指令的集合我们就可以看作是一个指令集。换句话说，当我们电脑执行一次简单的运算，（例如1+1=2）使用者需要告诉计算机执行什么操作，从哪里调取数据（LOAD），如何进行运算（ADD），和如何存储运算结果（STORE）。而很显然我们需要执行的是加法运算，所以CPU调用加法指令来完成我们的指令。而所有的这些指令集都是二进制代码形式来存在的，也就是我们熟知的0和1。之前的文章提到了，二进制代码是机器语言，所以人们用<strong>汇编语言</strong>来标记指令代码，而后来我们发明了高级语言，也就是我们现在的编程语言。但道理还是一样，最终都需要翻译成二进制代码。在这里我就不具体展开指令集的内容了，我们在编程时使用的编程语言不同，而我们现在也可以理解为什么指令集也有不同了。简单来说，无论是精简指令集还是复杂指令集，他们都能办事，只是他们的办事发放不一样罢了。<br><a href="https://www.jianshu.com/p/39325938a73a" target="_blank" rel="noopener">好文章</a><br><strong>An example of Instruction Set Architectue</strong><br><img src="https://zacharyratliff.org/images/add_isa.png" alt="alt"></p>
 <h2 id="复杂指令集（x86）"><a href="#复杂指令集（x86）" class="headerlink" title="复杂指令集（x86）"></a>复杂指令集（x86）</h2><p>如果你不知道什么是x86，但你一定知道Intel是什么？如果你的个人计算机现在使的是Intel酷睿的CPU，那么大概率你的个人计算机就是x86架构的。所以Intel开发的x86是复杂指令集的代表。我们如何理解复杂指令集呢？在这里我举个例子，比如我们去买东西，我们选好时间，地点和物品，，然后我们出发就可以了。而需要强调的是这一系列过程我们需要一次完成。那x86代表着Intel代号8086的CPU的家族统称。</p>
 <h2 id="精简指令集（ARM）"><a href="#精简指令集（ARM）" class="headerlink" title="精简指令集（ARM）"></a>精简指令集（ARM）</h2><p>如果你不知道什么是ARM，但你一定知道iPhone。iPhone使用的处理器都是都是已ARM为基础架构的。当然了也是WWDC上的重头戏，Apple为<strong>Mac</strong>自研的CPU也是<strong>ARM</strong>架构的。这也就不难理解为什么iPhone上的app未来也可以在Mac上运行了。我再来用买东西作为例子去解释精简指令集。例如：我周五要去买东西。买什么呢？买手机。去哪买呢？Apple store。看出区别了嘛？我们把一个复杂的过程拆分成若干个指令来分别执行。其实我觉得挺像我们编程时的面向过程的。每个指令都比较简单且短小，执行完一个再去执行下一个。 但是如果要处理更繁琐的要求，就需要更多的指令来完成。</p>
-<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>还有一些其他零零碎碎的关于CPU的知识，在这里说一下</p>
+<h1 id="More-about-CPU"><a href="#More-about-CPU" class="headerlink" title="More about CPU"></a>More about CPU</h1><p>还有一些其他零零碎碎的关于CPU的知识，在这里说一下</p>
 <ul>
-<li>CPU字长<br>我们的计算机在位数上各不同是因为CPU字长不同所导致的。现在我们熟悉的64位架构是什么意思呢？上文提到了，CPU所处理的数据是一段二进制代码，这些二进制代码分别代表着用户像计算机所下达的操作指令，而64所指的是，CPU在单位时间内处理长度为64bit的二进制数据。32位同理。</li>
-<li>寻址空间<br>聊完CPU字长，我们来说内存。因为在CPU处理命令过程中，内存的作用非同小可。而我们也都听说过内存的大小，影响着计算机运行的速度。这一说法如何解释呢？拿32位CPU举例，其寻址空间位2的32次方，也就是4GB左右。这说明32位CPU最大寻址空间为4GB。如果在此计算机上执行太过复杂的运算或命令，那么计算机卡顿或者不相应也就不足为奇了。<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1>这次Apple介绍的芯片，提起了我想要了解CPU的兴趣，但短时间内的了解和研究，还远远达不到烂熟于胸的程度。这篇文章也只是从兴趣的角度出发，宏观的阐述了一些关于CPU的概念。如果想要深入的了解与学习，想必还得更多的下下功夫。Peace✌️</li>
+<li><p>CPU速度<br>每当有新产品的发布，用户总会关心芯片的性能，而性能的高低总是跟运算的速度或者频率紧密相连。想要提升芯片速度，增加芯片内晶体管的数量是最直接的方法。而增加晶体管的数量无外乎这两个方法：增加芯片体积或者缩小晶体管体积。</p>
+</li>
+<li><p>CPU物理极限<br>讲完速度，我们不能不提摩尔定律。摩尔定律其核心内容为：集成电路上可以容纳的晶体管数目在大约每经过24个月便会增加一倍。换句话说，芯片的性能在一定时间内性能必然会得到提升。但当芯片的开发达到物理极限时，芯片的发展又将何去何从？</p>
+</li>
+<li><p>CPU字长<br>我们的计算机在位数上各不同是因为CPU字长不同所导致的。现在我们熟悉的64位架构是什么意思呢？上文提到了，CPU所处理的数据是一段二进制代码，这些二进制代码分别代表着用户像计算机所下达的操作指令，而64所指的是，CPU在单位时间内处理长度为64bit的二进制数据。32位同理。</p>
+</li>
+<li><p>寻址空间<br>聊完CPU字长，我们来说内存。因为在CPU处理命令过程中，内存的作用非同小可。而我们也都听说过内存的大小，影响着计算机运行的速度。这一说法如何解释呢？拿32位CPU举例，其寻址空间位2的32次方，也就是4GB左右。这说明32位CPU最大寻址空间为4GB。如果在此计算机上执行太过复杂的运算或命令，那么计算机卡顿或者不相应也就不足为奇了。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这次Apple介绍的芯片，提起了我想要了解CPU的兴趣，但短时间内的了解和研究，还远远达不到烂熟于胸的程度。这篇文章也只是从兴趣的角度出发，宏观的阐述了一些关于CPU的概念。如果想要深入的了解与学习，想必还得更多的下下功夫。Peace✌️</p>
+</li>
 </ul>
 
       
@@ -436,10 +443,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -449,6 +452,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
               </li>
             
             <div class="clearfix"></div>
