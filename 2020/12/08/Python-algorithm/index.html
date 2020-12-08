@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python Questions | I can do something</title>
+  <title>Python_algorithm | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is Python?Python is an interpreted（解释型）,interacive（交互性）,object-oriented-programming （面向对象）language,which can be used in many ways such as artifical intelligence, GUI development, data analytics,">
+  <meta name="description" content="一些常用到的编程算法递归（Recursion)递归这部分在最开始的《Python Questions》也提到过，在这里再次归纳进来 123456def rec(n):    if n&#x3D;&#x3D;1:      return 1    else:      return n+rec(n-1)print(rec(100))  二分查找（Binary search）直接将输入数据坎半，继而查找范围也减半 123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python Questions">
-<meta property="og:url" content="http://yoursite.com/2020/05/15/Python/index.html">
+<meta property="og:title" content="Python_algorithm">
+<meta property="og:url" content="http://yoursite.com/2020/12/08/Python-algorithm/index.html">
 <meta property="og:site_name" content="I can do something">
-<meta property="og:description" content="What is Python?Python is an interpreted（解释型）,interacive（交互性）,object-oriented-programming （面向对象）language,which can be used in many ways such as artifical intelligence, GUI development, data analytics,">
+<meta property="og:description" content="一些常用到的编程算法递归（Recursion)递归这部分在最开始的《Python Questions》也提到过，在这里再次归纳进来 123456def rec(n):    if n&#x3D;&#x3D;1:      return 1    else:      return n+rec(n-1)print(rec(100))  二分查找（Binary search）直接将输入数据坎半，继而查找范围也减半 123">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-15T03:33:22.000Z">
-<meta property="article:modified_time" content="2020-09-15T04:13:23.859Z">
+<meta property="article:published_time" content="2020-12-08T04:01:16.000Z">
+<meta property="article:modified_time" content="2020-12-08T04:43:31.974Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Code">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="I can do something" type="application/atom+xml">
@@ -154,61 +154,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python-algorithm" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python Questions
+      Python_algorithm
     </h1>
   
 
         
-        <a href="/2020/05/15/Python/" class="archive-article-date">
-  	<time datetime="2020-05-15T03:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
+        <a href="/2020/12/08/Python-algorithm/" class="archive-article-date">
+  	<time datetime="2020-12-08T04:01:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="What-is-Python"><a href="#What-is-Python" class="headerlink" title="What is Python?"></a>What is Python?</h1><p>Python is an interpreted（解释型）,interacive（交互性）,object-oriented-programming （面向对象）language,which can be used in many ways such as artifical intelligence, GUI development, data analytics, and so on.</p>
-<a id="more"></a>
-<h2 id="1-Define-a-function-to-convert-variabes（通过函数实现参数形式转换）"><a href="#1-Define-a-function-to-convert-variabes（通过函数实现参数形式转换）" class="headerlink" title="1.Define a function to convert variabes（通过函数实现参数形式转换）"></a>1.Define a function to convert variabes（通过函数实现参数形式转换）</h2><ul>
-<li>IP 地址转换<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">#定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="comment">#带入参数去除空格,已'.'分割,存入list</span></span><br><span class="line">    lis = x.strip().split(<span class="string">'.'</span>)</span><br><span class="line">    <span class="comment">#将list中的参数转全部换成二进制形式</span></span><br><span class="line">    li = [bin(int(i)) <span class="keyword">for</span> i <span class="keyword">in</span> lis]</span><br><span class="line">    <span class="comment">#根据list中参数长度将参数中的‘0b’转换成不同位数的0</span></span><br><span class="line">    li2 = [i.replace(<span class="string">'0b'</span>,(<span class="number">10</span>-len(i))*<span class="string">'0'</span>) <span class="keyword">for</span> i <span class="keyword">in</span> li]</span><br><span class="line">    <span class="comment">#将二进制转换成十进制并整合</span></span><br><span class="line">    <span class="keyword">return</span> int(<span class="string">''</span>.join(li2),<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">ip_address=func(<span class="string">'10.24.3.12'</span>)</span><br><span class="line">print(ip_address)</span><br></pre></td></tr></table></figure>
+        <h2 id="一些常用到的编程算法"><a href="#一些常用到的编程算法" class="headerlink" title="一些常用到的编程算法"></a>一些常用到的编程算法</h2><h3 id="递归（Recursion"><a href="#递归（Recursion" class="headerlink" title="递归（Recursion)"></a>递归（Recursion)</h3><p>递归这部分在最开始的《Python Questions》也提到过，在这里再次归纳进来</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rec</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      <span class="keyword">return</span> n+rec(n<span class="number">-1</span>)</span><br><span class="line">print(rec(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="2-Deine-a-function-to-display-the-multiplication-table（通过函数实现乘法表）"><a href="#2-Deine-a-function-to-display-the-multiplication-table（通过函数实现乘法表）" class="headerlink" title="2.Deine a function to display the multiplication table（通过函数实现乘法表）"></a>2.Deine a function to display the multiplication table（通过函数实现乘法表）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(x,y):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(x,i+<span class="number">1</span>):</span><br><span class="line">            print(<span class="string">"%s*%s=%2s"</span> % (j,i,i*j), end=<span class="string">"\t"</span>)</span><br><span class="line">    print()</span><br><span class="line">fun(<span class="number">1</span>,<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="二分查找（Binary-search）"><a href="#二分查找（Binary-search）" class="headerlink" title="二分查找（Binary search）"></a>二分查找（Binary search）</h3><p>直接将输入数据坎半，继而查找范围也减半</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary</span><span class="params">(input_data,target)</span>:</span></span><br><span class="line">    max= len(input_data)<span class="number">-1</span></span><br><span class="line">    min= <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(min&lt;=max):</span><br><span class="line">          mid=(max+min)/<span class="number">2</span></span><br><span class="line">          <span class="keyword">if</span>(target==input_data[mid]):</span><br><span class="line">              <span class="keyword">return</span> input_data[mid]</span><br><span class="line">          <span class="keyword">elif</span>(input_data[mid]&gt;target):</span><br><span class="line">              max=mid<span class="number">-1</span></span><br><span class="line">          <span class="keyword">else</span>:</span><br><span class="line">              min=mid+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">new_list=binary([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>],<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-Python-recursion-递归"><a href="#3-Python-recursion-递归" class="headerlink" title="3.Python recursion(递归)"></a>3.Python recursion(递归)</h2><blockquote>
-<p>计算机默认的最大递归深度在1000左右，python最大递归深度一般在4000左右（取决于计算机的性能）</p>
-</blockquote>
-<p>递归和循环的区别：</p>
-<ul>
-<li>循环：重复数据操作直到达到目标条件</li>
-<li>递归：粗略的可理解为在程序函数中再次调用此函数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#loop</span></span><br><span class="line">n=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>):</span><br><span class="line">    n=n+i</span><br><span class="line">    print(n)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#recursion</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> x==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> x+func(x<span class="number">-1</span>)</span><br><span class="line">print(func(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-在上述两个程序中都实现了0到100的求和，也区别出循环和递归的不同</li>
-</ul>
-<h2 id="4-Reading-data-from-multiple-lines-in-the-json-file-从json文件中读取多行数据"><a href="#4-Reading-data-from-multiple-lines-in-the-json-file-从json文件中读取多行数据" class="headerlink" title="4.Reading data from multiple lines in the json file(从json文件中读取多行数据)"></a>4.Reading data from multiple lines in the json file(从json文件中读取多行数据)</h2><p>在.json文件中如何逐行读取数据(How to handle Python json.loads shows ValueError:Extra data)</p>
-<blockquote>
-<p>if you have more than one data in your json file,json.loads()would not be able to decode more than one</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">user_data=open(<span class="string">"accounts.json"</span>,<span class="string">'r'</span>)readlines()</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> user_data:</span><br><span class="line">    user=json.loads(line)</span><br><span class="line">    <span class="comment">#print all data from the file</span></span><br><span class="line">    print(user)</span><br></pre></td></tr></table></figure>
-
-<h2 id="5-Dumping-data-to-the-file（保存数据到json文件中）"><a href="#5-Dumping-data-to-the-file（保存数据到json文件中）" class="headerlink" title="5.Dumping data to the file（保存数据到json文件中）"></a>5.Dumping data to the file（保存数据到json文件中）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#define a new function</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dump_accounts</span><span class="params">(account_dict)</span>:</span></span><br><span class="line">    <span class="comment">#open the file 'a'=append</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"accounts.json"</span>,<span class="string">'a'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        data=json.dump(account_dict,f)</span><br><span class="line">        <span class="comment">#the data should be stored in different lines</span></span><br><span class="line">        f.write(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-Data-flow-in-Python"><a href="#6-Data-flow-in-Python" class="headerlink" title="6.Data flow in Python"></a>6.Data flow in Python</h2><p><strong>数据在两个函数间传输及操作</strong><br>加载函数（load）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load</span><span class="params">(filename)</span>:</span></span><br><span class="line">    <span class="comment">#检验给出的路径是否是一个文件</span></span><br><span class="line">    <span class="keyword">if</span> os.path.isfile(filename):</span><br><span class="line">        <span class="comment">#只读模式</span></span><br><span class="line">        <span class="keyword">with</span> open(filename,<span class="string">'r'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    l=f.read()</span><br><span class="line">                    <span class="keyword">return</span> l</span><br><span class="line">                    <span class="comment">#print(l)</span></span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
-<p>操作函数（operate）</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">operate</span><span class="params">(obj)</span>:</span></span><br><span class="line">    usr=input(<span class="string">"Enter your name:&gt;&gt;"</span>).strip()</span><br><span class="line">    t=load(obj)</span><br><span class="line">    print(t)</span><br><span class="line">    <span class="keyword">if</span> usr <span class="keyword">in</span> t:</span><br><span class="line">        print(<span class="string">"Welcome"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"no result!"</span>)</span><br></pre></td></tr></table></figure>
-<p>main function</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#创建文件</span></span><br><span class="line">    f=open(<span class="string">'data.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">    <span class="comment">#写文件</span></span><br><span class="line">    f.write(<span class="string">'Hao\n'</span>)</span><br><span class="line">    f.write(<span class="string">'Bei'</span>)</span><br><span class="line">    <span class="comment">#关闭文件</span></span><br><span class="line">    f.close()</span><br><span class="line">    <span class="comment">#调用函数</span></span><br><span class="line">    operate(<span class="string">'data.txt'</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="7-给定一个整数数组-nums-和一个目标值-target，请你在该数组中找出和为目标值的那-两个-整数，并返回他们的数组下标。"><a href="#7-给定一个整数数组-nums-和一个目标值-target，请你在该数组中找出和为目标值的那-两个-整数，并返回他们的数组下标。" class="headerlink" title="7.给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。"></a>7.给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self,nums,target)</span>:</span></span><br><span class="line">        n=len(nums)</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(n):</span><br><span class="line">            a=target-nums[x]</span><br><span class="line">            <span class="keyword">if</span> a <span class="keyword">in</span> nums:</span><br><span class="line">                y= nums.index(a)</span><br><span class="line">                <span class="keyword">if</span> x==y:</span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    print(x,y)</span><br><span class="line">                    print(nums[x],nums[y])</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">s=Solution()</span><br><span class="line">s.twoSum([<span class="number">2</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">15</span>],<span class="number">9</span>)</span><br></pre></td></tr></table></figure>
-<p><strong>Updated on 9/15/20</strong></p>
+<h3 id="冒泡排序（Bubble-sort）"><a href="#冒泡排序（Bubble-sort）" class="headerlink" title="冒泡排序（Bubble sort）"></a>冒泡排序（Bubble sort）</h3><p>相邻两个数比大小，遍历整个数组后，将输入数据按大小排列<br>def bubble_sort(input_data):<br>    for i1 in range(len(input_data)-1):<br>        for i2 in range(len(input_data)-1-i1):<br>            if input_data[i2]&gt;input_data[i2+1]:<br>                input_data[i2],input_data[i2+1]=input_data[i2+1],input_data[i2]<br>    return input_data</p>
 
       
 
@@ -247,7 +219,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Algorithm</a>
         		</li>
       		
 		</ul>
@@ -303,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/15/Python/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/08/Python-algorithm/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/15/Day1-Python-Basics/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Day1-Python-Basics
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/15/Hello-World/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/10/22/12-Next-Step/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">12-Next-Step?</div>
       <i class="icon-circle-right"></i>
     </a>
   
