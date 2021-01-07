@@ -16,7 +16,7 @@
 <meta property="og:description" content="这一段日子没怎么更新，也没怎么看代码，一直在弄回国和机票的事，只要有时间还是会继续整理 前言面向对象我早就想写了，好好总结一下，对自己也有帮助，也会对OOP更加熟悉。跟之前一样，还是基于对于Python之路的学习。放上链接  The link of tutorials:Day6  多说一句，我又找到了另外一个非常全面的学习博客，人家真是厉害啊。  链接：Python全栈开发之路  Ok!正文开始">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-08T05:32:04.000Z">
-<meta property="article:modified_time" content="2021-01-07T04:44:02.107Z">
+<meta property="article:modified_time" content="2021-01-07T04:57:33.580Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Python">
@@ -194,19 +194,21 @@
 </blockquote>
 <h3 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h3><ol>
 <li>封装(Encapsulation)<blockquote>
-<p>我们给定义好的类和对象赋予值，然后进行打包</p>
+<p>我们给定义好的类和对象赋予值，然后进行打包，从而隔离复杂度</p>
 </blockquote>
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name=<span class="string">"Hao"</span></span><br><span class="line">        self.age=<span class="number">22</span></span><br><span class="line">     <span class="comment">#__name = "luffy"</span></span><br><span class="line">     <span class="comment">#__age = 18</span></span><br><span class="line">p1 = People()</span><br><span class="line">print(p1.__dict__)</span><br><span class="line"><span class="comment">#系统会报错 code：'People' object has no attribute '__name'</span></span><br><span class="line">print(p1.__name, p1.__age)</span><br><span class="line"><span class="comment">#正确赋值</span></span><br><span class="line">print(p1._People__name, p1._People__age)</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>继承(Inheritance)<blockquote>
-<p>可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展</p>
+<li><p>继承(Inheritance)</p>
+<blockquote>
+<p>可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展，类与类之间的关系，避免代码的重复</p>
 </blockquote>
 </li>
-<li>多态(Polymorphism)<blockquote>
-<p>允许将子类类型的指针赋值给父类类型的指针</p>
+<li><p>多态(Polymorphism)</p>
+<blockquote>
+<p>允许将子类类型的指针赋值给父类类型的指针，不论对象如何改变，运用同一种形式接口调用</p>
 </blockquote>
 </li>
 </ol>
@@ -469,15 +471,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Algorithm</a>
               </li>
              
               <li class="article-tag-list-item">
