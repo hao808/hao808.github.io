@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python-OOP-2 | I can do something</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="又有一段时间没更新了，历经艰难，终于回到祖国的怀抱了 前言这一些日子没怎么看代码，感觉生疏了不少。万变不离其宗阿，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。">
+  <meta name="description" content="又有一段时间没更新了，历经艰难，终于回到祖国的怀抱了 前言这一些日子没怎么写代码，感觉生疏了不少。万变不离其宗，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python-OOP-2">
 <meta property="og:url" content="http://yoursite.com/2020/07/15/Python-OOP-2/index.html">
 <meta property="og:site_name" content="I can do something">
-<meta property="og:description" content="又有一段时间没更新了，历经艰难，终于回到祖国的怀抱了 前言这一些日子没怎么看代码，感觉生疏了不少。万变不离其宗阿，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。">
+<meta property="og:description" content="又有一段时间没更新了，历经艰难，终于回到祖国的怀抱了 前言这一些日子没怎么写代码，感觉生疏了不少。万变不离其宗，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-14T23:10:45.000Z">
-<meta property="article:modified_time" content="2020-07-15T00:47:08.913Z">
+<meta property="article:modified_time" content="2021-02-26T14:48:41.859Z">
 <meta property="article:author" content="Tianhao Cui">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Python">
@@ -181,12 +181,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>又有一段时间没更新了，历经艰难，终于回到祖国的怀抱了</strong></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这一些日子没怎么<strong>看</strong>代码，感觉生疏了不少。万变不离其宗阿，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这一些日子没怎么<strong>写</strong>代码，感觉生疏了不少。万变不离其宗，代码这东西也是得反复练习，自己上手，才能越来越熟练阿。这遍文章不会很长，还是关于面向对象的一个巩固和练习。</p>
 <a id="more"></a>
 <h1 id="练习程序"><a href="#练习程序" class="headerlink" title="练习程序"></a>练习程序</h1><blockquote>
 <p>用面向对象的形式编写一个老师角色，并实现创建老师，查询老师，删除老师等要求</p>
 </blockquote>
-<p>其实你去Baidu上一搜索，答案马上就会有。照猫画虎谁不会呢，但其实我们还真不能小瞧了照猫画虎的本事，谁一下子上来就会呢？谁不是从0⃣️开始的呢？</p>
+<p>其实你去Baidu上一搜索，答案马上就会有。照猫画虎谁不会呢，但其实我们还真不能小瞧了照猫画虎的本事，谁一下子上来就会呢？谁不是从0开始的呢？</p>
 <ol>
 <li><p>为什么会选择这个题呢？</p>
 <blockquote>
@@ -226,7 +226,7 @@
 
 <p>#总结<br>整个程序看下来，我明白了以下几点</p>
 <ol>
-<li><p>整个程序已<strong>manage.py</strong>下的<strong>utility</strong>类为基础实现了数据的存储，调用和删除。在<strong>func.py</strong>下又创建了一个manage<strong>父类</strong>和两个schools，teachers的<strong>子类</strong>，从而在utility上又增加了一层。所以整个程序主要是在这两个大类上进行函数的调用来实现题目要求。思路还是比较清晰度。</p>
+<li><p>整个程序已<strong>manage.py</strong>下的<strong>utility</strong>类为基础实现了数据的存储，调用和删除。在<strong>func.py</strong>下又创建了一个manage<strong>父类</strong>和两个schools，teachers的<strong>子类</strong>，从而在utility上又增加了一层。所以整个程序主要是在这两个大类上进行函数的调用来实现题目要求，总体来说思路还是比较清晰的。</p>
 </li>
 <li><p>对比之前写的程序，每增加一个大类，都要再写一遍重复的关于这个类的数据调用，参见Day6，虽然当时也构造了Class，但是没有掌握面向对象的精髓所在，从上面的程序可知，当我们新增加了对象就没有必要再重复了，直接调用manage类里的函数就可以了，同理可证manage类，直接调用utility里的函数。</p>
 </li>
@@ -465,6 +465,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -474,10 +478,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Interview</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Blockchain</a>
               </li>
              
               <li class="article-tag-list-item">
